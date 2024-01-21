@@ -10,7 +10,6 @@ fn main() {
     let mut counter = 1;
     loop {
         let mut guess = String::new();
-        println!("The secret number is: {}", secret_number);
         println!("Please input your guess.");
         io::stdin()
             .read_line(&mut guess)
@@ -34,17 +33,5 @@ fn main() {
         println!("You guessed: {}", guess);
         counter += 1;
     }
+    println!("The secret number is: {}", secret_number);
 }
-
-// fn guess() {
-//     // generating a rangom number between 1 and 10
-//     let secret_number = rand::thread_rng().gen_range(1..11);
-//     // take user input
-//     let mut guess = String::new();
-//     io::stdin()
-//         .read_line(&mut guess)
-//         .expect("Failed to read line");
-//     let guess: u32 = guess.trim().parse().expect("Please type a number!");
-//     println!("You guessed: {}", guess);
-//     println!("The secret number is: {}", secret_number);
-// }
